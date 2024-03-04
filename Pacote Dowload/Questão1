@@ -1,0 +1,28 @@
+import matplotlib.pyplot as plt
+
+# lista para armazenar os valores inseridos pelo usuário
+valores = []
+
+# solicitar ao usuário a quantidade de valores a serem inseridos
+num_valores = int(input("Digite a quantidade de valores que deseja inserir: "))
+
+# solicitar ao usuário os valores e adicioná-los à lista
+for i in range(num_valores):
+    valor = float(input(f"Digite o valor {i+1}: "))
+    valores.append(valor)
+
+# criar uma lista com os índices dos valores
+indices = list(range(1, num_valores + 1))
+
+# criar o gráfico bidimensional
+plt.plot(indices, valores)
+
+# adicionar título ao gráfico
+plt.title("Gráfico do usuário")
+
+# adicionar rótulos aos eixos
+plt.xlabel("Índice")
+plt.ylabel("Valor")
+
+# exibir o gráfico
+plt.show()
